@@ -401,7 +401,7 @@ If working directory is clean, return nil."
 
 It looks like:
 
-➜ eshell-git-prompt git:(master) ✗ git status "
+ eshell-git-prompt (master) ✗ git status"
   ;; Prompt components
   (let (beg dir git-branch git-dirty end)
     ;; Beg: start symbol
@@ -419,7 +419,7 @@ It looks like:
 
       (setq git-branch
             (concat
-             (with-face "git:(" 'eshell-git-prompt-robyrussell-git-face)
+             (with-face "(" 'eshell-git-prompt-robyrussell-git-face)
              (with-face (eshell-git-prompt--readable-branch-name) 'eshell-git-prompt-robyrussell-branch-face)
              (with-face ")" 'eshell-git-prompt-robyrussell-git-face)))
 
@@ -459,7 +459,7 @@ It looks like:
             (eshell-git-prompt--remote-branch-name))
       (concat
        " "
-       (with-face "git:(" 'eshell-git-prompt-branch-face)
+       (with-face "(" 'eshell-git-prompt-branch-face)
 
        ;; Branch name
        (with-face (eshell-git-prompt--readable-branch-name)
