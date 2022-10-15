@@ -406,8 +406,8 @@ It looks like:
   (let (beg dir git-branch git-dirty end)
     ;; Beg: start symbol
     (setq beg
-          (with-face "➜" (if (eshell-git-prompt-exit-success-p)
-                            'eshell-git-prompt-exit-success-face 'eshell-git-prompt-exit-fail-face)))
+          (if (eshell-git-prompt-exit-success-p)
+              (with-face " " 'eshell-git-prompt-exit-success-face) (with-face " " 'eshell-git-prompt-exit-fail-face)))
 
     ;; Dir: current working directory
     (setq dir (with-face (eshell-git-prompt--shorten-directory-name)
